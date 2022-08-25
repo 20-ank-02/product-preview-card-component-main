@@ -1,9 +1,43 @@
-// @import "/scss_files/config";
+@import "config";
+@import "variables";
+
+body {
+  background-color: $Cream;
+}
 
 .attribution {
-  font-size: 11px;
+  font-size: 9px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  font-family: $montserrat;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.main-card {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    position: relative;
+    top: 140px;
+    width: 600px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  }
+}
+
+.product-detail {
+  padding: 32px;
 }
