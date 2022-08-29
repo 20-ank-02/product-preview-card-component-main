@@ -22,6 +22,7 @@ body {
 
 .main-card {
   display: flex;
+
   justify-content: center;
 
   .card {
@@ -29,12 +30,18 @@ body {
     grid-template-columns: auto auto;
     justify-content: center;
     position: relative;
-    top: 140px;
-    width: 600px;
+    top: 10rem;
+    width: 42rem;
 
-    border-radius: 10px;
+    border-radius: 0.7rem;
     overflow: hidden;
     background-color: white;
+    .product-photo-desktop {
+      display: block;
+    }
+    .product-photo-mobile {
+      display: none;
+    }
   }
 }
 
@@ -52,20 +59,80 @@ body {
     font-weight: 700;
     margin-top: 25px;
     margin-bottom: 25px;
-    font-size: 32px;
+    font-size: 2.5rem;
+    line-height: 1;
   }
   .description {
-    font-size: small;
+    font-size: 14px;
     font-family: $montserrat;
     line-height: 1.6;
     color: $Dark-grayish-blue;
   }
   .price {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-top: 23px;
+    margin-bottom: 23px;
     h4 {
       font-family: $fraunces;
-      font-size: large;
+      font-size: 30px;
+      color: $Dark-cyan;
+    }
+    h5 {
+      font-family: $montserrat;
+      color: $Dark-grayish-blue;
+      padding-left: 20px;
+      font-weight: 500;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-family: $montserrat;
+  color: white;
+  background-color: $Dark-cyan;
+  .cart {
+    padding-right: 5px;
+  }
+}
+
+.add-to-cart:hover {
+  background-color: darken($Dark-cyan, 15%);
+}
+
+@media (max-width: 500px) {
+  .main-card {
+    // display: flex;
+    // justify-content: center;
+
+    // flex-direction: column;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      // justify-content: center;
+      // position: relative;
+      // top: 140px;
+      width: 25rem;
+
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      .product-photo-desktop {
+        display: none;
+      }
+      .product-photo-mobile {
+        display: block;
+      }
     }
   }
 }
